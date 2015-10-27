@@ -144,7 +144,7 @@ li {
     font-family: raleway;
     font-size: 1.4em;
     color: rgba(76, 76, 76, 0.67);
-    margin-bottom: 20px;
+    margin: 20px 0px;
 }
 
 
@@ -416,6 +416,35 @@ li {
 	color: white;
 }
 
+.category_title {
+    width: 100%;
+    text-align: center;
+    font-family: raleway;
+    margin: 40px 0px;
+    color: #9C9C9C;
+    font-size: 20px;
+}
+
+.fa.fa-archive {
+    font-size: 80px;
+    width: 100%;
+    text-align: center;
+    color: #444444;
+}
+
+.fa.fa-cogs {
+    font-size: 80px;
+    width: 100%;
+    text-align: center;
+    color: #444444;	
+}
+
+.fa.fa-file-image-o {
+    font-size: 80px;
+    width: 100%;
+    text-align: center;
+    color: #444444;
+}
 
 /* Media Queries */
 
