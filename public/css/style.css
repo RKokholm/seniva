@@ -67,7 +67,7 @@ li {
 	min-height: 100vh;
 	background-position: center;
 	background-size: cover;
-	background-image: url(/images/front.png);
+	background-image: url(/images/mac.jpg);
 	margin: -40px 0px 0px 0px;
 }
 
@@ -142,8 +142,9 @@ li {
 .title {
     text-align: center;
     font-family: raleway;
-    font-size: 2em;
-    color: #4C4C4C;
+    font-size: 1.4em;
+    color: rgba(76, 76, 76, 0.67);
+    margin-bottom: 20px;
 }
 
 
@@ -188,9 +189,21 @@ li {
     letter-spacing: 0.2em;
 }
 
-.container {
+.container_wide {
 	margin: 0px auto 40px auto;
 	max-width: 1240px;
+	height: 100%;
+}
+
+.container_medium {
+	margin: 0px auto 40px auto;
+	max-width: 900px;
+	height: 100%;
+}
+
+.container_slick {
+	margin: 0px auto 40px auto;
+	max-width: 600px;
 	height: 100%;
 }
 
@@ -389,6 +402,20 @@ li {
 ::-webkit-scrollbar-thumb:window-inactive {
 	background: rgb(191, 191, 191); 
 }
+
+.team_login {
+	float: left;
+	padding: 4px 9px;
+	color: rgba(0, 0, 0, 0.63);
+	border-radius: 2px;
+}
+
+.team_login:hover {
+	background: rgba(0, 103, 149, 0.5);
+	-webkit-transition-duration: 0.2s;
+	color: white;
+}
+
 
 /* Media Queries */
 

@@ -2,7 +2,7 @@
 
 	<a href="{{ URL::route('home_path') }}" id="brand_container">
 	
-		<img id="logo" src="images/logosenivalightblue.png">
+		<img id="logo" src="/images/logosenivablue.png">
 		<span id="brand">SENIVA</span>
 
 	</a>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>@yield('title')</title>
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="/css/style.css">
 	<link rel=“stylesheet” href=“https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css”/>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:600,600italic,400italic,700,700italic,800,800italic,300,300italic,400' rel='stylesheet' type='text/css'>
@@ -33,7 +33,9 @@
 	<div id="content">
 		@yield('content')
 
-		<div id="footer">		
+		<div id="footer">
+
+				<a href="#"><div class="team_login">Team login</div></a>		
 
 				Copyright @ 2015 | Seniva - All Rights Reserved
 

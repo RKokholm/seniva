@@ -6,7 +6,7 @@
 
     @include('partials.nav')
 
-    <div class="container">
+    <div class="container_wide">
 			
 			<div class="seperator">
 

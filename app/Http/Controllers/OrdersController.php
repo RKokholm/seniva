@@ -18,6 +18,16 @@ class OrdersController extends Controller
          return view('orders');
     }
 
+        public function getcustom()
+    {
+         return view('orders_custom');
+    }
+
+        public function getpremade()
+    {
+         return view('orders_premade');
+    }
+
     /**
      * Show the form for creating a new resource.
      *
