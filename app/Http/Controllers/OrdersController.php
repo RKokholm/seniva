@@ -23,9 +23,14 @@ class OrdersController extends Controller
          return view('orders_custom');
     }
 
-        public function getpremade()
+        public function getpacks()
     {
-         return view('orders_premade');
+         return view('orders_packs');
+    }
+
+        public function getsingle()
+    {
+         return view('orders_single');
     }
 
     /**

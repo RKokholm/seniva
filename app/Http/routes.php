@@ -16,4 +16,5 @@ Route::get('/prices', ['as' => 'prices_path', 'uses' => 'PricesController@index'
 Route::get('/order', ['as' => 'orders_path', 'uses' => 'OrdersController@index']);
 Route::get('/portfolio', ['as' => 'portfolio_path', 'uses' => 'PortfolioController@index']);
 Route::get('/order/customize', ['as' => 'order_custom_path', 'uses' => 'OrdersController@getcustom']);
-Route::get('/order/premade', ['as' => 'order_premade_path', 'uses' => 'OrdersController@getpremade']);
+Route::get('/order/packs', ['as' => 'order_packs_path', 'uses' => 'OrdersController@getpacks']);
+Route::get('/order/single', ['as' => 'order_single_path', 'uses' => 'OrdersController@getsingle']);

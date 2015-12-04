@@ -56,6 +56,10 @@ li {
 	list-style-type: none;
 }
 
+a {
+	text-decoration: none;
+}
+
 #content {
 	width: 100%;
 	float: left;
@@ -315,9 +319,11 @@ li {
 .item {
 	background: #FBFBFB;
     width: 90%;
-    height: 350px;
+    min-height: 270px;
+    height: 100%;
     margin: auto;
     border: 1px solid gainsboro;
+    text-align: center;
 }
 
 .item:hover {
@@ -420,30 +426,41 @@ li {
     width: 100%;
     text-align: center;
     font-family: raleway;
-    margin: 40px 0px;
-    color: #9C9C9C;
+    margin: 20px 0px;
+    color: rgba(0, 0, 0, 0.61);
     font-size: 20px;
+    font-weight: 500;
 }
 
 .fa.fa-archive {
     font-size: 80px;
     width: 100%;
     text-align: center;
-    color: #444444;
+    color: #51BC1A;
+    margin: 30px 0px 0px 0px;
 }
 
 .fa.fa-cogs {
     font-size: 80px;
     width: 100%;
     text-align: center;
-    color: #444444;	
+    color: #BC211A;
+    margin: 30px 0px 0px 0px;
 }
 
 .fa.fa-file-image-o {
     font-size: 80px;
     width: 100%;
     text-align: center;
-    color: #444444;
+    color: #A54CB5;
+    margin: 30px 0px 0px 0px;
+}
+
+.item span {
+	color: rgba(140, 139, 139, 0.81);
+    font-family: raleway;
+    font-size: 14px;
+    font-weight: 500;
 }
 
 /* Media Queries */
@@ -454,12 +471,24 @@ li {
 		width: 50%;
 	}
 
-	.container {
+	.container_slick {
 		margin: auto;
 		max-width: 600px;
 		height: 100%;
 	}
 	
+	.container_medium {
+		margin: auto;
+		max-width: 600px;
+		height: 100%;
+	}
+
+	.container_wide {
+		margin: auto;
+		max-width: 600px;
+		height: 100%;
+	}
+
 	.footer_bottom {
 	    font-size: initial;
 	}
@@ -496,12 +525,24 @@ li {
 		width: 50%;
 	}
 
-	.container {
+	.container_slick {
 		margin: auto;
 		max-width: 600px;
 		height: 100%;
 	}
 	
+	.container_medium {
+		margin: auto;
+		max-width: 600px;
+		height: 100%;
+	}
+
+	.container_wide {
+		margin: auto;
+		max-width: 600px;
+		height: 100%;
+	}
+
 	.footer_bottom {
 	    font-size: initial;
 	}
@@ -586,7 +627,19 @@ li {
 	    font-size: 0.8em;
 	}
 
-	.container {
+	.container_slick {
+		margin: auto;
+		max-width: 350px;
+		height: 100%;
+	}
+
+	.container_medium {
+		margin: auto;
+		max-width: 350px;
+		height: 100%;
+	}
+
+	.container_wide {
 		margin: auto;
 		max-width: 350px;
 		height: 100%;
