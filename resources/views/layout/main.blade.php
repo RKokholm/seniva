@@ -25,6 +25,10 @@
 
 			});
 
+			$(document).ready(function(){
+   				$(".fade").hide(0).delay(600).fadeIn(1800)
+			});
+
 	</script>
 
 </head>

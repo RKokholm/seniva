@@ -14,8 +14,8 @@
 
         			<div class="welcome_wrapper">
 
-    	    			<span class="welcome_headline">Hi, i'm Rasmus</span>
-	        			<span class="welcome_underline">Welcome to Seniva</span>
+    	    			<span class="welcome_headline fade">Welcome to Seniva</span>
+	        			<span class="welcome_underline fade">We create fancy things</span>
 
 	        		</div>
 
