@@ -1,38 +1,16 @@
-<div id="nav">
-
-	<a href="{{ URL::route('home_path') }}" id="brand_container">
+<div id="header">
 	
-		<img id="logo" src="/images/logosenivablue.png">
-		<span id="brand">SENIVA</span>
-
-	</a>
-
-	<div id="menu">
+	<nav class="top_nav">
 		
 		<ul>
 			
-			<a href="{{ URL::route('about_path') }}"><li>Om</li></a>
-			<a href="{{ URL::route('prices_path') }}"><li>Priser</li></a>
-			<a href="{{ URL::route('orders_path') }}"><li>Bestilling</li></a>
-			<a href="{{ URL::route('portfolio_path') }}"><li>Portfolio</li></a>
+			<a href=""><li>Order</li></a>
+			<a href=""><li>Prices</li></a>
+			<a href=""><li>Portfolio</li></a>
+			<a href=""><li>Fourth</li></a>
 
 		</ul>
 
-	</div>
-
-	<i class="fa fa-bars"></i>
+	</nav>
 
 </div>
-
-	<div id="menu_collapsed">
-		
-		<ul>
-			
-			<a href="{{ URL::route('about_path') }}"><li>Om</li></a>
-			<a href="{{ URL::route('prices_path') }}"><li>Priser</li></a>
-			<a href="{{ URL::route('orders_path') }}"><li>Bestilling</li></a>
-			<a href="{{ URL::route('portfolio_path') }}"><li>Portfolio</li></a>
-
-		</ul>
-
-	</div>

@@ -67,38 +67,44 @@ a {
 
 #cover {
 	width: 100%;
-	height: 100%;
-	min-height: 100vh;
+	height: 700px;
 	background-position: center;
 	background-size: cover;
-	background-image: url(/images/mac.jpg);
-	margin: -40px 0px 0px 0px;
+	background-image: url(/images/front1.png);
 }
 
-#nav {
+#header {
+	height: 100px;
 	width: 100%;
 	max-width: 1920px;
-	height: 5.556em;
-	box-sizing: border-box;
-	border-bottom: 0.056em solid #E8E8E8;
-	background: rgb(251, 251, 251);
-	margin-bottom: 40px;
 }
 
-#logo {
-	margin: 1em 0em 0em 1.278em;
-    width:3.167em;
-    float: left;
+.top_nav {
+	height: 100%;
+	width: 100%;
+	max-width: 1240px;
+	margin: auto;
 }
 
-#brand {
-	font-family: raleway;
-    font-size: 1.111em;
-    font-weight: 300;
-    float: left;
-    letter-spacing: 0.444em;
-    color: #006795;
-    margin: 2.056em 0em 0em 0.611em;
+.top_nav ul {
+	height: 100%;
+}
+
+.top_nav a {
+	float: left;
+	color: rgba(255, 255, 255, 0.6);
+	font-size: 16px;
+	font-family: "roboto";
+	font-weight: 100;
+	padding: 40px 0px 0px 0px;
+	height: 100%;
+	width: 25%;
+	text-align: center;
+}
+
+.top_nav a:hover {
+	color: white;
+	-webkit-transition-duration: 0.2s;
 }
 
 #brand_container {
@@ -126,7 +132,7 @@ a {
 	width: 25%;
 	text-decoration: none;
 	float: left;
-	color: #006795;
+	color: #00305A;
 	font-family: raleway;
 	text-align: center;
 }
@@ -137,9 +143,8 @@ a {
 }
 
 #menu ul a li:hover{
-	border-top: 0.3em solid #72ACE6;
-    padding: 1.95em 0em;
-    -webkit-transition-duration: 0.1s;
+    font-size: 18px;
+    margin-top: -6px;
 }
 
 
@@ -290,6 +295,34 @@ a {
     margin: 20px auto;
 }
 
+.welcome_headline {
+    color: white;
+    font-family: roboto;
+    font-size: 45px;
+    font-weight: 100;
+    text-align: center;
+    display: block;
+}
+.welcome_underline {
+    color: white;
+    font-family: roboto;
+    font-size: 75px;
+    font-weight: 400;
+    text-align: center;
+    margin: -15px auto;
+    display: block;
+}
+
+.welcome_wrapper {
+	height: 135px;
+    width: 100%;
+    margin-top: 180px;
+}
+
+.welcome_wrapper:hover {
+	font-size: 20px;
+}
+
 .price {
 	color: white;
     font-family: raleway;
@@ -436,7 +469,7 @@ a {
     font-size: 80px;
     width: 100%;
     text-align: center;
-    color: #51BC1A;
+    color: #0B3456;
     margin: 30px 0px 0px 0px;
 }
 
@@ -444,7 +477,7 @@ a {
     font-size: 80px;
     width: 100%;
     text-align: center;
-    color: #BC211A;
+    color: #0B3456;
     margin: 30px 0px 0px 0px;
 }
 
@@ -452,7 +485,7 @@ a {
     font-size: 80px;
     width: 100%;
     text-align: center;
-    color: #A54CB5;
+    color: #0B3456;
     margin: 30px 0px 0px 0px;
 }
 
@@ -468,7 +501,7 @@ a {
 @media only screen and (max-width: 68.750em) {
 	
 		[class*="col-"] {
-		width: 50%;
+		width: 100%;
 	}
 
 	.container_slick {
@@ -517,12 +550,19 @@ a {
 		width: 100%;
 	}
 
+	.welcome_headline {
+		font-size: 35px;
+	}
+
+		.welcome_underline {
+		font-size: 60px;
+	}
 }
 
 @media only screen and (max-width: 880px) {
 	
 		[class*="col-"] {
-		width: 50%;
+		width: 100%;
 	}
 
 	.container_slick {
@@ -613,6 +653,18 @@ a {
 
 	.change_pos {
 		width: 100%;
+	}
+
+}
+
+@media only screen and (max-width: 542px) {
+
+	.welcome_headline {
+		margin-bottom: 20px;
+	}
+
+	.welcome_underline {
+		line-height: 0.9;
 	}
 
 }
