@@ -1,5 +1,7 @@
 <div id="header">
 	
+	<img src="/images/logosenivawhite.png" class="logo">
+
 	<nav class="top_nav">
 		
 		<ul>

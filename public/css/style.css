@@ -271,6 +271,12 @@ a {
 	margin-bottom: 100px;
 }
 
+.logo {
+	width: 50px;
+	margin: 23px;
+	float: left;
+}
+
 .logo_icon {
 	width: 20%;
     display: block;
