@@ -79,6 +79,15 @@ a {
 	max-width: 1920px;
 }
 
+#header_2 {
+	height: 100px;
+	width: 100%;
+	max-width: 1920px;
+	background: white;
+	border-bottom: 1px solid #E8E8E8;
+}
+
+
 .top_nav {
 	height: 100%;
 	width: 100%;
@@ -104,6 +113,34 @@ a {
 
 .top_nav a:hover {
 	color: white;
+	-webkit-transition-duration: 0.2s;
+}
+
+.top_nav_2 {
+	height: 100%;
+	width: 100%;
+	max-width: 1240px;
+	margin: auto;
+}
+
+.top_nav_2 ul {
+	height: 100%;
+}
+
+.top_nav_2 a {
+	float: left;
+	color: rgba(0, 0, 0, 0.48);
+	font-size: 16px;
+	font-family: "roboto";
+	font-weight: 400;
+	padding: 40px 0px 0px 0px;
+	height: 100%;
+	width: 25%;
+	text-align: center;
+}
+
+.top_nav_2 a:hover {
+	color: #0B3456;
 	-webkit-transition-duration: 0.2s;
 }
 

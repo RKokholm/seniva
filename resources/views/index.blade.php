@@ -6,7 +6,7 @@
 
         <div id="cover">
 
-            @include('partials.nav')
+            @include('partials.front_page_nav')
         	
         	<div class="container_wide">
         		
@@ -14,8 +14,8 @@
 
         			<div class="welcome_wrapper">
 
-    	    			<span class="welcome_headline fade">Welcome to Seniva</span>
-	        			<span class="welcome_underline fade">We create fancy things</span>
+    	    			<span class="welcome_headline fade">Lorem Ipsum</span>
+	        			<span class="welcome_underline fade">Lorem ipsum dolor sit</span>
 
 	        		</div>
 

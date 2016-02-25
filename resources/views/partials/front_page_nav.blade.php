@@ -1,8 +1,8 @@
-<div id="header_2">
+<div id="header">
 	
-	<a href="{{ URL::route("home_path") }}"><img src="/images/logosenivadark.png" class="logo"></a>
+	<a href="{{ URL::route("home_path") }}"><img src="/images/logosenivawhite.png" class="logo"></a>
 
-	<nav class="top_nav_2">
+	<nav class="top_nav">
 		
 		<ul>
 			
