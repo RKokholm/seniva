@@ -45,9 +45,11 @@ body {
     bottom: 0px;
     right: 0px;
     padding: 0px; 
-	overflow: hidden;
+	overflow-x: hidden;
+	overflow-y: scroll;
 	margin: 0em;
 	background: whitesmoke;
+	height: 100%;
 }
 
 ul {
@@ -675,7 +677,7 @@ input:-webkit-autofill {
 	width: 280px;
 	background: #171D26;
 	float: left;
-	height: 100vh;
+	height: 1200px;
 }
 
 .admin_header{
@@ -747,6 +749,117 @@ input:-webkit-autofill {
 	background: #1A212B;
 }
 
+.admin_page_title {
+	margin-bottom: 40px;
+	display: block;
+}
+
+.admin_page_area {
+	padding: 40px;
+    overflow: hidden;
+    font-family: open sans;
+    color: #959595;
+    font-size: 21px;
+    font-weight: 100;
+    letter-spacing: 0.2em;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.16);
+}
+
+.admin_page_area table {
+	letter-spacing: 0;
+	width: 100%;
+}
+
+.admin_page_area tr {
+	font-weight: 400;
+	font-size: 17px;
+	color: rgba(0, 0, 0, 0.65);
+}
+
+.admin_page_area tr:nth-child(odd) {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.admin_page_area tr:nth-child(1) {
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.81);
+}
+
+.admin_page_area td {
+    width: 20%;
+    padding: 7px;
+}
+
+.admin_page_area input {
+    padding: 9px 13px;
+    margin: 0px 0px 9px 0px;
+    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.18);
+    font-size: 15px;
+    font-family: open sans;
+    letter-spacing: 0.1em;
+    color: rgb(88, 88, 88);
+    width: 270px;
+}
+
+.admin_page_area input[type="submit"] {
+    border: 1px solid rgb(37, 99, 179);
+    color: rgb(255, 255, 255);
+    background: #3285EF;
+}
+
+.admin_page_area input[type="submit"]:hover {
+    border: 1px solid rgb(37, 99, 179);
+    color: rgb(255, 255, 255);
+    background: #2F7BDC;
+    cursor: pointer;
+}
+
+.admin_page_area input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: rgba(88, 88, 88, 0.49);
+}
+.admin_page_area input::-moz-placeholder { /* Firefox 19+ */
+  color: rgba(88, 88, 88, 0.49);
+}
+.admin_page_area input:-ms-input-placeholder { /* IE 10+ */
+  color: rgba(88, 88, 88, 0.49);
+}
+.admin_page_area input:-moz-placeholder { /* Firefox 18- */
+  color: rgba(88, 88, 88, 0.49);
+}
+
+.user_delete {
+    font-size: 14px;
+    background: #EF3232;
+    border: 1px solid #B92525;
+    padding: 4px 8px;
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+    float: left;
+}
+
+.user_delete:hover {
+	background: #D22C2C;
+    border: 1px solid #9C2121;
+}
+
+.user_edit {
+    font-size: 14px;
+    background: #3285EF;
+    border: 1px solid #2563B3;
+    padding: 4px 8px;
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+    float: left;
+    margin: 0px 0px 0px 5px;
+}
+
+.user_edit:hover {
+	background: #2B6DC1;
+    border: 1px solid #215392;
+}
 
 
 /* Media Queries */

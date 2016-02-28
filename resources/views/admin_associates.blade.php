@@ -5,28 +5,77 @@
 	@include('partials.admin_sidebar')
 
 	<div class="admin_header">MANAGE ASSOCIATES</div>
-
-	@if(isset($errors))
 	
-		@foreach($errors->all() as $error)
-			{{ $error }}
+	<div class="admin_page_area">
 
-		@endforeach
+		<span class="admin_page_title">CURRENT ASSOCIATES</span>
 
-	@endif
+		<table cellspacing="0">
 
-	<div class="form">
-		<form action="{{ Route('user.store') }}" method="POST">
-			<input type="hidden" name="_token" value="{!! csrf_token() !!}">
+				<tr>
+					<td>First name</td>
+					<td>Last name</td>
+					<td>Email</td>
+					<td>Hired</td>
+					<td>Actions</td>
+				</tr>
+			
+			@foreach ($users->all() as $user)
+				
+	
+				<tr>
+					<td>{{ $user->first_name }}</td>
+					<td>{{ $user->last_name }}</td>
+					<td>{{ $user->email }}</td>
+					<td>{{ $user->created_at->format('j. F Y') }}</td>
+					<td>
+						<form action="{{ Route('user.destroy', $user->id) }}" method="POST">
+							<input type="hidden" name="_token" value="{!! csrf_token() !!}">
+							<input type="hidden" name="_method" value="DELETE">
+							<button type="submit" class="user_delete"><i class="fa fa-times"></i></i></button>
+						</form>
+					
+						<form action="" method="POST">
+							<input type="hidden" name="_token" value="{!! csrf_token() !!}">
+							<input type="hidden" name="_method" value="DELETE">
+							<button type="submit" class="user_edit"><i class="fa fa-pencil"></i></i></button>
+						</form>
+					</td>
+				</tr>
 
-			<input type="text" name="first_name"><br>
-			<input type="text" name="last_name"><br>
-			<input type="text" name="email"><br>
-			<input type="password" name="password"><br>
-			<input type="password" name="password_confirmation"><br>
-			<input type="submit">
+			@endforeach
 
-		</form>
+		</table>
+		
+	</div>
+
+	<div class="admin_page_area">
+		
+		<span class="admin_page_title">ADD ASSOCIATE</span>
+
+		@if(isset($errors))
+		
+			@foreach($errors->all() as $error)
+				{{ $error }}
+
+			@endforeach
+
+		@endif
+
+		<div class="form">
+			<form action="{{ Route('user.store') }}" method="POST">
+				<input type="hidden" name="_token" value="{!! csrf_token() !!}">
+
+				<input type="text" name="first_name" placeholder="First Name" required><br>
+				<input type="text" name="last_name" placeholder="Last Name" required><br>
+				<input type="text" name="email" placeholder="Email"  required><br>
+				<input type="password" name="password" placeholder="Password"  required><br>
+				<input type="password" name="password_confirmation" placeholder="Confirm Password" required><br>
+				<input type="submit" value="Add">
+
+			</form>
+		</div>
+
 	</div>
 
 @stop

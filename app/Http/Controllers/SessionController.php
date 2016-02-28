@@ -15,11 +15,12 @@ class SessionController extends Controller
     }
 
     public function store(Request $request) {
+
     	if (Auth::attempt($request->only('email', 'password'))) {
-            return redirect()->intended('admin_path');
+            return redirect()->intended(route('admin_path'));
         }
 
-        return redirect()->back()->with('errors', 'Wrong username or password');
+        return redirect()->back()->with('errors', 'Wrong email or password');
     }
 
     public function delete(){

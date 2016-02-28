@@ -22,7 +22,7 @@
 				<input type="hidden" name="_token" value="{{ csrf_token() }}" />
 
 				<div class="form_group">
-					<input type="text" name="username" placeholder="Username" required>
+					<input type="text" name="email" placeholder="Email" required>
 				</div>
 
 				<div class="form_group">

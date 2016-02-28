@@ -55,7 +55,7 @@ class UserController extends Controller
 
         $user->save();
 
-        return redirect()->route('admin_path');
+        return redirect()->route('admin_users_path');
     }
 
     /**
@@ -98,8 +98,11 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($user)
     {
-        //
+        $user = User::find($user);
+        $user->delete();
+
+        return redirect()->back();
     }
 }

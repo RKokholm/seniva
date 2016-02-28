@@ -22,7 +22,8 @@ class AdminController extends Controller
 
     public function getUserManagement()
     {
-        return view('admin_associates');
+        $users = User::all()->sortBy('first_name');
+        return view('admin_associates', ['users' => $users]);
     }
 
         public function getProjectsManagement()
