@@ -11,9 +11,20 @@
 |
 */
 Route::get('/', ['as' => 'home_path', 'uses' => 'HomeController@index']);
-Route::get('/about', ['as' => 'about_path', 'uses' => 'AboutController@index']);
-Route::get('/prices', ['as' => 'prices_path', 'uses' => 'PricesController@index']);
-Route::get('/order', ['as' => 'orders_path', 'uses' => 'OrdersController@index']);
-Route::get('/portfolio', ['as' => 'portfolio_path', 'uses' => 'PortfolioController@index']);
-Route::get('/order/packs', ['as' => 'order_packs_path', 'uses' => 'OrdersController@getpacks']);
-Route::get('/order/single', ['as' => 'order_single_path', 'uses' => 'OrdersController@getsingle']);
+
+/* User */
+Route::resource('user', 'UserController');
+
+/* Admin */
+Route::get('admin', ['as' => 'admin_path', 'uses' => 'AdminController@getIndex']);
+Route::get('admin/users', ['as' => 'admin_users_path', 'uses' => 'AdminController@getUserManagement']);
+Route::get('admin/projects', ['as' => 'admin_projects_path', 'uses' => 'AdminController@getProjectsManagement']);
+
+/* Login / Logout */
+Route::get('login', ['as' => 'login_path', 'uses' => 'SessionController@index']);
+Route::post('login', ['as' => 'login_path', 'uses' => 'SessionController@store']);
+
+/* Static Pages */
+Route::get('prices', ['as' => 'prices_path', 'uses' => 'PricesController@index']);
+Route::get('order', ['as' => 'orders_path', 'uses' => 'OrdersController@index']);
+Route::get('portfolio', ['as' => 'portfolio_path', 'uses' => 'PortfolioController@index']);
