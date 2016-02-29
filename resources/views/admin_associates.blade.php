@@ -10,43 +10,47 @@
 
 		<span class="admin_page_title">CURRENT ASSOCIATES</span>
 
-		<table cellspacing="0">
+		@if(isset($users))
 
-				<tr>
-					<td>First name</td>
-					<td>Last name</td>
-					<td>Email</td>
-					<td>Hired</td>
-					<td>Actions</td>
-				</tr>
-			
-			@foreach ($users->all() as $user)
+			<table cellspacing="0">
+
+					<tr>
+						<td>First name</td>
+						<td>Last name</td>
+						<td>Email</td>
+						<td>Hired</td>
+						<td>Actions</td>
+					</tr>
 				
-	
-				<tr>
-					<td>{{ $user->first_name }}</td>
-					<td>{{ $user->last_name }}</td>
-					<td>{{ $user->email }}</td>
-					<td>{{ $user->created_at->format('j. F Y') }}</td>
-					<td>
-						<form action="{{ Route('user.destroy', $user->id) }}" method="POST">
-							<input type="hidden" name="_token" value="{!! csrf_token() !!}">
-							<input type="hidden" name="_method" value="DELETE">
-							<button type="submit" class="user_delete"><i class="fa fa-times"></i></i></button>
-						</form>
+				@foreach ($users->all() as $user)
 					
-						<form action="" method="POST">
-							<input type="hidden" name="_token" value="{!! csrf_token() !!}">
-							<input type="hidden" name="_method" value="DELETE">
-							<button type="submit" class="user_edit"><i class="fa fa-pencil"></i></i></button>
-						</form>
-					</td>
-				</tr>
-
-			@endforeach
-
-		</table>
 		
+					<tr>
+						<td>{{ $user->first_name }}</td>
+						<td>{{ $user->last_name }}</td>
+						<td>{{ $user->email }}</td>
+						<td>{{ $user->created_at->format('j. F Y') }}</td>
+						<td>
+							<form action="{{ Route('user.destroy', $user->id) }}" method="POST">
+								<input type="hidden" name="_token" value="{!! csrf_token() !!}">
+								<input type="hidden" name="_method" value="DELETE">
+								<button type="submit"><i class="fa fa-times"></i></i></button>
+							</form>
+						
+							<form action="" method="POST">
+								<input type="hidden" name="_token" value="{!! csrf_token() !!}">
+								<input type="hidden" name="_method" value="DELETE">
+								<button type="submit"><i class="fa fa-pencil"></i></i></button>
+							</form>
+						</td>
+					</tr>
+
+				@endforeach
+
+			</table>
+		
+		@endif
+
 	</div>
 
 	<div class="admin_page_area">
