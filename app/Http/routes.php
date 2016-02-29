@@ -26,6 +26,7 @@ Route::group(['middleware' => 'web'], function() {
 	/* Login / Logout */
 	Route::get('login', ['as' => 'login_path', 'uses' => 'SessionController@index']);
 	Route::post('login', ['as' => 'login_path', 'uses' => 'SessionController@store']);
+	Route::get('logout', ['as' => 'logout_path', 'uses' => 'SessionController@delete']);
 
 	/* Static Pages */
 	Route::get('prices', ['as' => 'prices_path', 'uses' => 'PricesController@index']);

@@ -34,13 +34,13 @@
 							<form action="{{ Route('user.destroy', $user->id) }}" method="POST">
 								<input type="hidden" name="_token" value="{!! csrf_token() !!}">
 								<input type="hidden" name="_method" value="DELETE">
-								<button type="submit"><i class="fa fa-times"></i></i></button>
+								<button type="submit" class="user_action" alt="Delete user"><i class="fa fa-times"></i></i></button>
 							</form>
 						
 							<form action="" method="POST">
 								<input type="hidden" name="_token" value="{!! csrf_token() !!}">
 								<input type="hidden" name="_method" value="DELETE">
-								<button type="submit"><i class="fa fa-pencil"></i></i></button>
+								<button type="submit" class="user_action"><i class="fa fa-pencil"></i></i></button>
 							</form>
 						</td>
 					</tr>
@@ -55,31 +55,45 @@
 
 	<div class="admin_page_area">
 		
-		<span class="admin_page_title">ADD ASSOCIATE</span>
+		<div class="col-3">
+			<span class="admin_page_title">ADD ASSOCIATE</span>
 
-		@if(isset($errors))
-		
-			@foreach($errors->all() as $error)
-				{{ $error }}
+			@if(isset($errors))
+			
+				@foreach($errors->all() as $error)
+					{{ $error }}
 
-			@endforeach
+				@endforeach
 
-		@endif
+			@endif
 
-		<div class="form">
-			<form action="{{ Route('user.store') }}" method="POST">
-				<input type="hidden" name="_token" value="{!! csrf_token() !!}">
+			<div class="form">
+				<form action="{{ Route('user.store') }}" method="POST">
+					<input type="hidden" name="_token" value="{!! csrf_token() !!}">
 
-				<input type="text" name="first_name" placeholder="First Name" required><br>
-				<input type="text" name="last_name" placeholder="Last Name" required><br>
-				<input type="text" name="email" placeholder="Email"  required><br>
-				<input type="password" name="password" placeholder="Password"  required><br>
-				<input type="password" name="password_confirmation" placeholder="Confirm Password" required><br>
-				<input type="submit" value="Add">
+					<input type="text" name="first_name" placeholder="First Name" required><br>
+					<input type="text" name="last_name" placeholder="Last Name" required><br>
+					<input type="text" name="email" placeholder="Email"  required><br>
+					<input type="password" name="password" placeholder="Password"  required><br>
+					<input type="password" name="password_confirmation" placeholder="Confirm Password" required><br>
+					<input type="submit" value="Add">
 
-			</form>
+				</form>
+			</div>
+
 		</div>
 
+		<div class="col-9">
+			
+			<span class="admin_page_title">ASSOCIATE STATISTICS</span>
+
+			<div id="curve_chart" style="
+			width: 800px; 
+			height: 450px; 
+			border: 1px solid #D1D1D1;
+			"></div>
+
+		</div>
 	</div>
 
 @stop

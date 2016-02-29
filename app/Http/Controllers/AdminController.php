@@ -22,7 +22,7 @@ class AdminController extends Controller
 
     public function getUserManagement()
     {
-        $users = User::all()->sortBy('first_name');
+        $users = User::all()->sortBy('created_at');
         return view('admin_associates', ['users' => $users]);
     }
 
