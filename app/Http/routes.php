@@ -15,13 +15,20 @@ Route::group(['middleware' => 'web'], function() {
 
 	Route::get('/', ['as' => 'home_path', 'uses' => 'HomeController@index']);
 
-	/* User */
-	Route::resource('user', 'UserController');
 
-	/* Admin */
-	Route::get('admin', ['as' => 'admin_path', 'uses' => 'AdminController@getIndex']);
-	Route::get('admin/users', ['as' => 'admin_users_path', 'uses' => 'AdminController@getUserManagement']);
-	Route::get('admin/projects', ['as' => 'admin_projects_path', 'uses' => 'AdminController@getProjectsManagement']);
+	/* Auth Middleware */
+
+	Route::group(['middleware' => 'auth'], function(){
+
+		/* User */
+		Route::resource('user', 'UserController');
+
+		/* Admin */
+		Route::get('admin', ['as' => 'admin_path', 'uses' => 'AdminController@getIndex']);
+		Route::get('admin/users', ['as' => 'admin_users_path', 'uses' => 'AdminController@getUserManagement']);
+		Route::get('admin/projects', ['as' => 'admin_projects_path', 'uses' => 'AdminController@getProjectsManagement']);
+
+	});
 
 	/* Login / Logout */
 	Route::get('login', ['as' => 'login_path', 'uses' => 'SessionController@index']);
