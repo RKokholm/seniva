@@ -24,6 +24,7 @@ class SessionController extends Controller
     }
 
     public function delete(){
-    	
+    	Auth::logout();
+        return redirect()->back();
     }
 }

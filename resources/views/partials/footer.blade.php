@@ -1,19 +1,26 @@
 		<div id="footer">
 
-				<a href="#"><div class="team_login">Team login</div></a>		
 
-				Copyright @ 2015 | Seniva - All Rights Reserved
+				<div class="col-4">
+					
+					@if(Auth::check())
 
-			<div class="social_media">
+						<a href="{{ route('logout_path') }}"><div class="team_login">Logout</div></a>
 
-				<div class="icon_wrapper">
-				
-					<a href="#"><i class="fa fa-facebook-square"></i></a>
-					<a href="#"><i class="fa fa-twitter-square"></i></a>
-					<a href="#"><i class="fa fa-google-plus-square"></i></a>
+					@else
+
+						<a href="{{ route('login_path') }}"><div class="team_login">Team</div></a>	
+
+					@endif
 
 				</div>
 
-			</div>
-			
+				<div class="col-4">	
+
+				Copyright @ 2015 | Seniva - All Rights Reserved
+
+				</div>
+
+				<div class="col-4"></div>
+
 		</div>
