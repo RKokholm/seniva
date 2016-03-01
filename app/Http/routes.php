@@ -23,6 +23,10 @@ Route::group(['middleware' => 'web'], function() {
 		/* User */
 		Route::resource('user', 'UserController');
 
+		/* Projects */
+
+		Route::resource('project', 'ProjectsController');
+
 		/* Admin */
 		Route::get('admin', ['as' => 'admin_path', 'uses' => 'AdminController@getIndex']);
 		Route::get('admin/users', ['as' => 'admin_users_path', 'uses' => 'AdminController@getUserManagement']);
@@ -39,5 +43,13 @@ Route::group(['middleware' => 'web'], function() {
 	Route::get('prices', ['as' => 'prices_path', 'uses' => 'PricesController@index']);
 	Route::get('order', ['as' => 'orders_path', 'uses' => 'OrdersController@index']);
 	Route::get('portfolio', ['as' => 'portfolio_path', 'uses' => 'PortfolioController@index']);
+
+	Route::get('cloud', function(){
+	
+		// $image = \Cloudinary\Uploader::upload("http://media2.s-nbcnews.com/j/newscms/2014_09/211871/140226-federal-reserve-building-950a_ddcaf2cb1fed3804f3d032ca1e27edbd.nbcnews-fp-1200-800.jpg");
+		
+
+
+	});
 
 });

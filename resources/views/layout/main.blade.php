@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <title>@yield('title')</title>
 	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/bootstrap.css">
+	<link rel="stylesheet" href="/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/css/bootstrap.theme.css">
+	<link rel="stylesheet" href="/css/bootstrap.theme.min.css">
 	<link rel=“stylesheet” href=“https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css”/>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:600,600italic,400italic,700,700italic,800,800italic,300,300italic,400' rel='stylesheet' type='text/css'>
@@ -61,6 +65,15 @@
 			});
 
 	</script>
+
+	<script>
+		function buttonChange() {
+			document.getElementById('cloud').className="fa fa-check";
+			document.getElementById('file_upload_button_id').className='file_upload_button_contains';
+			document.getElementById('file_upload_button_contains').innerHTML="Images selected!";
+		}
+	</script>
+
 
 	<link rel="icon" href="/images/logosenivablue.png">
 

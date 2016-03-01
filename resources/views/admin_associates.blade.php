@@ -55,11 +55,10 @@
 
 	<div class="admin_page_area">
 		
-<<<<<<< HEAD
-		<div class="col-3">
-=======
+	<div class="col-12">
+
 		<div class="col-6">
->>>>>>> a2f1492dbb44444620473e66d7d3297a0a824351
+
 			<span class="admin_page_title">ADD ASSOCIATE</span>
 
 			@if(isset($errors))
@@ -87,22 +86,20 @@
 
 		</div>
 
-<<<<<<< HEAD
-		<div class="col-9">
-=======
+
+
 		<div class="col-6">
->>>>>>> a2f1492dbb44444620473e66d7d3297a0a824351
 			
 			<span class="admin_page_title">ASSOCIATE STATISTICS</span>
 
 			<div id="curve_chart" style="
-<<<<<<< HEAD
+
 			width: 800px; 
 			height: 450px; 
-=======
+
 			width: 100%; 
 			height: 287px; 
->>>>>>> a2f1492dbb44444620473e66d7d3297a0a824351
+
 			border: 1px solid #D1D1D1;
 			"></div>
 

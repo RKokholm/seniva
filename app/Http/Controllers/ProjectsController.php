@@ -3,34 +3,22 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Requests;
-use App\Http\Controllers\Controller;
 
-use App\User;
+use App\Http\Requests;
+use Cloudinary;
+use Cloudinary\Uploader;
 use App\Project;
 
-class AdminController extends Controller
+class ProjectsController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function getIndex()
+    public function index()
     {
-        return view('admin');
-    }
-
-    public function getUserManagement()
-    {
-        $users = User::all()->sortBy('created_at');
-        return view('admin_associates', ['users' => $users]);
-    }
-
-        public function getProjectsManagement()
-    {
-        $projects = Project::with('images')->get();
-        return view('admin_projects', ['projects' => $projects]);
+        //
     }
 
     /**
@@ -51,7 +39,20 @@ class AdminController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Cloudinary::config(array( 
+          "cloud_name" => "seniva", 
+          "api_key" => "572854663344648", 
+          "api_secret" => "8YqjessAxqDJeOtU4SUYUPedRV8" 
+        ));
+     
+        $file = $request->file('image_file')->getRealPath();
+
+        $image = Uploader::upload($file);
+
+        $project = Project::create($request->only('title', 'description'));
+        $project->images()->create(['public_id' => $image['public_id']]);
+
+        return redirect()->back();
     }
 
     /**
