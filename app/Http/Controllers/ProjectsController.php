@@ -72,9 +72,10 @@ class ProjectsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($project)
     {
-        //
+        $project = Project::find($project);
+        return view('admin_edit_project', ['project' => $project]);
     }
 
     /**

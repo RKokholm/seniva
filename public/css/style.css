@@ -63,6 +63,10 @@ a {
 	text-decoration: none;
 }
 
+textarea {
+	resize: none;
+}
+
 #content {
 	width: 100%;
 	float: left;
@@ -808,7 +812,19 @@ input:-webkit-autofill {
     font-family: open sans;
     letter-spacing: 0.1em;
     color: rgb(88, 88, 88);
-    width: 300px;
+    width: 100%;
+}
+
+.admin_page_area textarea {
+	font-family: open sans;
+    letter-spacing: 0.2em;
+    font-size: 15px;
+    width: 100%;
+    border-radius: 3px;
+    border: 1px solid #D1D1D1;
+    padding: 10px;
+    color: rgb(88, 88, 88);
+    height: 250px;
 }
 
 .admin_page_area input[type="submit"] {
@@ -920,6 +936,7 @@ input[type="file"] {
 	margin: 0px 0px 30px 30px;
 	display: inline-block;
     border-radius: 5px;
+    word-break:break-all;
 }
 
 .image_preview:hover .hover_over {
