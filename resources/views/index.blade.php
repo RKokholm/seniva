@@ -10,7 +10,7 @@
         	
         	<div class="container_wide">
         		
-        		<div class="col-12">
+        		<div class="col-8">
 
         			<div class="welcome_wrapper">
 

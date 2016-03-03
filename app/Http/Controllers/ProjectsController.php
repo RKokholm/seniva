@@ -95,8 +95,28 @@ class ProjectsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($project)
     {
-        //
+        Cloudinary::config(array( 
+          "cloud_name" => "seniva", 
+          "api_key" => "572854663344648", 
+          "api_secret" => "8YqjessAxqDJeOtU4SUYUPedRV8" 
+        ));
+        
+        $project = Project::find($project);
+        foreach ($project->images as $image)
+        {
+
+            Cloudinary\Uploader::destroy($image->public_id);
+            $image->delete();
+            
+        }
+
+        $project->delete();
+        return redirect()->back();
+
+        
+
+        
     }
 }

@@ -915,12 +915,55 @@ input[type="file"] {
 }
 
 .image_preview {
-	width: 250px;
-	height: 250px;
+	width: 200px;
+	height: 200px;
 	margin: 0px 0px 30px 30px;
 	display: inline-block;
+    border-radius: 5px;
 }
 
+.image_preview:hover .hover_over {
+    opacity: 1;
+    -webkit-transition-duration: 0.3s;
+}
+
+.hover_over {
+    background: rgba(23, 29, 38, 0.88);
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    margin: -200px 0px;
+    opacity: 0;
+}
+
+.image_content {
+    color: white;
+    letter-spacing: 0;
+    font-weight: 400;
+    font-size: 27px;
+    font-family: cabin;
+}
+
+.image_content .project_title {
+    margin-top: 80px;
+}
+
+.image_content .fa {
+    color: white;
+    display: block;
+    text-decoration: none;
+    float: right;
+    right: 6px;
+    top: 10px;
+    font-size: 22px;
+    position: absolute;
+    background: rgba(0,0,0,0);
+    border: 0px;
+}
+
+.image_content .fa.fa-pencil {
+    margin-right: 27px;
+}
 
 /* Media Queries */
 

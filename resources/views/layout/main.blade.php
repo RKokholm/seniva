@@ -74,7 +74,6 @@
 		}
 	</script>
 
-
 	<link rel="icon" href="/images/logosenivablue.png">
 
 </head>
