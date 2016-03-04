@@ -10,6 +10,8 @@
 	
 	<div class="admin_page_area">
 
+			
+
 			@if(isset($projects))
 	
 				@foreach($projects->all() as $project)
@@ -44,34 +46,13 @@
 				@endforeach
 
 			@endif
+	</div>
 
+	<div class="admin_page_area">
 
-			<div class="col-8">
-
-				<span class="admin_page_title">ADD PROJECT</span>
-
-				@if(isset($errors))
-				
-					@foreach($errors->all() as $error)
-						{{ $error }}
-
-					@endforeach
-
-				@endif
-
-				<div class="col-4">
-					<form action="{{ Route('project.store') }}" method="POST" enctype="multipart/form-data">
-						<input type="hidden" name="_token" value="{!! csrf_token() !!}">
-						<input type="text" name="title" maxlength="20" placeholder="Title" required><br>
-						<textarea placeholder="Description" name="description" maxlength="650" wrap="hard" required></textarea><br>
-						<label for="image_file" class="file_upload_button" id="file_upload_button_id">Choose images<i class="fa fa-cloud-upload" id="cloud"></i></label><br>
-						<input type="file" name="image_file" id="image_file" onchange="buttonChange()" required><br>
-						<input type="submit" value="Add">
-					</form>
-				</div>
-
-			</div>
+		<a href="{{ route('admin_project_create_path') }}" class="create_project_button">Create Project<i class="fa fa-plus"></i></a>
 
 	</div>
 
 @stop
+

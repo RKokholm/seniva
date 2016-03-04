@@ -33,6 +33,11 @@ class AdminController extends Controller
         return view('admin_projects', ['projects' => $projects]);
     }
 
+        public function getProjectCreate()
+    {
+        return view('admin_project_create');
+    }
+
     /**
      * Show the form for creating a new resource.
      *

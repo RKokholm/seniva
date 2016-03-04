@@ -52,7 +52,7 @@ class ProjectsController extends Controller
         $project = Project::create($request->only('title', 'description'));
         $project->images()->create(['public_id' => $image['public_id']]);
 
-        return redirect()->back();
+        return redirect()->route('admin_projects_path');
     }
 
     /**

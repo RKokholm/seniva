@@ -31,6 +31,7 @@ Route::group(['middleware' => 'web'], function() {
 		Route::get('admin', ['as' => 'admin_path', 'uses' => 'AdminController@getIndex']);
 		Route::get('admin/users', ['as' => 'admin_users_path', 'uses' => 'AdminController@getUserManagement']);
 		Route::get('admin/projects', ['as' => 'admin_projects_path', 'uses' => 'AdminController@getProjectsManagement']);
+		Route::get('admin/projects/create', ['as' => 'admin_project_create_path', 'uses' => 'AdminController@getProjectCreate']);
 
 	});
 
