@@ -18,7 +18,7 @@
 			<input type="text" name="title" maxlength="20" placeholder="Title" required><br>
 			<textarea placeholder="Description" cols="30" rows="10" name="description" maxlength="650" wrap="hard" required></textarea><br>
 			<label for="image_file" class="file_upload_button" id="file_upload_button_id">Choose images<i class="fa fa-cloud-upload" id="cloud"></i></label><br>
-			<input type="file" name="image_file" id="image_file" onchange="buttonChange()" required><br>
+			<input type="file" name="image_file" id="image_file" onchange="buttonChange()" multiple required><br>
 			<input type="submit" value="Create"><a href="{{ route('admin_projects_path') }}">Back</a>
 		</form>
 </div>
