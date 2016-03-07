@@ -14,8 +14,8 @@
 
         			<div class="welcome_wrapper">
 
-    	    			<span class="welcome_headline fade">Lorem Ipsum</span>
-	        			<span class="welcome_underline fade">Lorem ipsum dolor sit</span>
+    	    			<h1>Lorem Ipsum</h1>
+	        			<h2>Lorem ipsum dolor sit</h2>
 
 	        		</div>
 
