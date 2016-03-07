@@ -76,9 +76,9 @@ textarea {
 #cover {
     width: 100%;
     height: 700px;
-    background-position: center;
-    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0) ), url('/images/114H.jpg');
+    background: url('/images/cover2.png');
     background-size: cover;
+    background-position: center bottom;
 }
 
 #login_cover {
@@ -86,7 +86,7 @@ textarea {
 	height: 100vh;
 	background-position: center;
 	background-size: cover;
-	background-image: url(/images/114H.jpg);
+	background-image: url(/images/coverclear.png);
 	position: absolute;
 }
 
@@ -158,7 +158,7 @@ textarea {
 }
 
 .top_nav_2 a:hover {
-	color: #0B3456;
+	color: #2980b9;
 	-webkit-transition-duration: 0.2s;
     text-decoration: none;
 }
@@ -331,6 +331,7 @@ textarea {
 	width: 50px;
 	margin: 23px;
 	float: left;
+    position: fixed;
 }
 
 .logo_icon {
@@ -365,6 +366,7 @@ textarea {
     text-align: center;
     display: block;
     margin: 0px;
+    line-height: 77px;
 }
 .welcome_wrapper h2 {
     color: white;
@@ -374,12 +376,13 @@ textarea {
     text-align: center;
     margin: -15px auto;
     display: block;
+   line-height: 77px;
 }
 
 .welcome_wrapper {
 	height: 135px;
     width: 100%;
-    margin-top: 120px;
+    margin-top: 45px;
 }
 
 .welcome_wrapper:hover {
@@ -511,12 +514,13 @@ textarea {
 	color: rgba(0, 0, 0, 0.63);
 	border-radius: 2px;
 	font-family: open sans;
+    font-weight: 600;
 }
 
 .team_login:hover {
 	-webkit-transition-duration: 0.2s;
     font-weight: 600;
-    color: #1D1D1D;
+    color: #2980b9;
 }
 
 .category_title {
@@ -1089,7 +1093,17 @@ background: white;
     font-size: 17px;
     float: right;
 }
+    .nav_collapsed {
+        display: none;
+    }
 
+    .nav_collapsed ul a {
+        display: none;
+    }
+
+    .nav_collapsed ul a:hover {
+        display: none;
+    }
 
 /* Media Queries */
 
@@ -1135,14 +1149,6 @@ background: white;
 
 	.change_pos {
 		width: 100%;
-	}
-
-	.welcome_wrapper h1 {
-		font-size: 35px;
-	}
-
-		.welcome_wrapper h2 {
-		font-size: 60px;
 	}
 }
 
@@ -1192,19 +1198,6 @@ background: white;
 		float: none;
 	}
 
-	.fa.fa-bars {
-    	display: block;
-    	float: right;
-    	color: #006795;
-    	font-size: 35px;
-    	margin: -62px 23px;
-	}
-
-	.fa.fa-bars:hover {
-		cursor: pointer;
-		background: color: #006795;
-	}
-
 	#menu_collapsed {
 		width: 100%;
 		border-bottom: 1px solid #E8E8E8;
@@ -1244,31 +1237,60 @@ background: white;
 
 }
 
-@media only screen and (max-width: 850px) {
-    
-    .logo {
+
+@media only screen and (max-width: 650px) {
+    .top_nav {
         display: none;
     }
 
-    .top_nav, .top_nav_2 {
-        width: 100%
+    .top_nav_2 {
+        display: none;
     }
-    
+
+    .fa.fa-bars {
+        display: block;
+        color: #FFFFFF;
+        font-size: 35px;
+        margin: 31px 25px;
+        position: fixed;
+        right: 5px;
+    }
+
+    .fa.fa-bars:hover {
+        cursor: pointer;
+        color: #B2E7FF;
+    }
+
+    .nav_collapsed {
+        display: none;
+        position: fixed;
+        background: rgba(251, 251, 251, 0.81);
+        right: 16px;
+        left: 10px;
+        top: 93px;
+        border-radius: 5px;
+    }
+
+    .nav_collapsed ul a {
+        display: none;
+        padding: 13px 24px;
+        display: block;
+        color: #196698;
+        font-family: open sans;
+        font-weight: normal;
+        letter-spacing: 0.1em;
+        border-radius: 5px;
+    }
+
+    .nav_collapsed ul a:hover {
+        display: none;
+        text-decoration: none;
+        background: rgba(146, 191, 220, 0.58);
+    }
+
 }
 
-@media only screen and (max-width: 542px) {
-
-	.welcome_wrapper h1 {
-		margin-bottom: 20px;
-	}
-
-	.welcome_wrapper h2 {
-		line-height: 0.9;
-	}
-
-}
-
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 510px) {
 
 	[class*="col-"] {
 		width: 100%;
@@ -1322,8 +1344,43 @@ background: white;
         display: none;
     }
 
-    .logo  {
-        display: block;
+    #cover {
+        height: 500px; 
     }
 
+    .welcome_wrapper h1 {
+        font-size: 30px;
+        line-height: 70px;
+    }
+
+    .welcome_wrapper h2 {
+        font-size: 45px;
+        line-height: 50px;
+    }
+
+    .welcome_wrapper {
+        margin-top: 5px;
+    }
+}
+
+@media only screen and (max-width: 330px) {
+        #cover {
+        height: 420px; 
+    }
+
+    .welcome_wrapper h1 {
+        font-size: 28px;
+        line-height: 57px;
+        margin-top: -20px;
+    }
+
+    .welcome_wrapper h2 {
+        font-size: 41px;
+        line-height: 42px;
+        margin-top: -6px;
+    }
+
+    .welcome_wrapper {
+        margin-top: 0px;
+    }
 }
