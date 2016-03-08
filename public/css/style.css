@@ -371,7 +371,7 @@ textarea {
 .welcome_wrapper h2 {
     color: white;
     font-family: roboto;
-    font-size: 75px;
+    font-size: 68px;
     font-weight: 400;
     text-align: center;
     margin: -15px auto;
@@ -382,7 +382,7 @@ textarea {
 .welcome_wrapper {
 	height: 135px;
     width: 100%;
-    margin-top: 45px;
+    margin-top: 20px;
 }
 
 .welcome_wrapper:hover {
@@ -1101,11 +1101,37 @@ background: white;
         display: none;
     }
 
-    .nav_collapsed ul a:hover {
-        display: none;
-    }
+
+.call_to_action {
+    color: rgba(255, 255, 255, 0.79);
+    text-align: center;
+    display: block;
+    font-family: open sans;
+    margin: 359px auto 0px auto;
+    border: 3px solid rgba(255, 255, 255, 0.79);
+    width: 130px;
+    padding: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.call_to_action:hover {
+    background: white;
+    color: rgb(108, 41, 120);
+    -webkit-transition-duration: 0.2s;
+}
 
 /* Media Queries */
+
+@media only screen and (max-width: 1700px) {
+
+    .call_to_action { 
+        margin: 371px auto 0px auto;
+    }
+
+}
 
 @media only screen and (max-width: 1100px) {
 	
@@ -1283,7 +1309,6 @@ background: white;
     }
 
     .nav_collapsed ul a:hover {
-        display: none;
         text-decoration: none;
         background: rgba(146, 191, 220, 0.58);
     }
@@ -1354,12 +1379,18 @@ background: white;
     }
 
     .welcome_wrapper h2 {
-        font-size: 45px;
+        font-size: 42px;
         line-height: 50px;
     }
 
     .welcome_wrapper {
-        margin-top: 5px;
+        margin-top: 27px;
+    }
+    .call_to_action { 
+        margin: 217px auto 0px auto;
+        font-size: 11px;
+        padding: 9px;
+        width: 100px;
     }
 }
 
@@ -1369,18 +1400,24 @@ background: white;
     }
 
     .welcome_wrapper h1 {
-        font-size: 28px;
-        line-height: 57px;
+        font-size: 23px;
+        line-height: 35px;
         margin-top: -20px;
     }
 
     .welcome_wrapper h2 {
-        font-size: 41px;
+        font-size: 36px;
         line-height: 42px;
         margin-top: -6px;
     }
 
     .welcome_wrapper {
-        margin-top: 0px;
+        margin-top: 37px;
+    }
+    .call_to_action { 
+        margin: 188px auto 0px auto;
+        font-size: 10px;
+        padding: 7px;
+        width: 97px;
     }
 }

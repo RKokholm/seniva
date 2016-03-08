@@ -14,8 +14,10 @@
 
         			<div class="welcome_wrapper">
 
-    	    			<h1>Lorem Ipsum</h1>
-	        			<h2>Lorem ipsum dolor sit</h2>
+    	    			<h1>Hi, we are Seniva</h1>
+	        			<h2>The spark that ignites your dream</h2>
+
+                        <a href="#" class="call_to_action">Our Work</a>
 
 	        		</div>
 

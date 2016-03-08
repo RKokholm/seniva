@@ -75,6 +75,20 @@
 
 	</script>
 
+    <script>
+	    var text = ['foo', 'bar', 'baz'];
+	        i = 0,
+	        $div = document.getElementById('changeText');
+	    
+	    setInterval(function ()
+	    {
+	        $div.fadeOut(function ()
+	        {
+	            $div.text(text[i++ % text.length]).fadeIn();
+	        });
+	    }, 1000);
+    </script>
+
 	<link rel="icon" href="/images/logoseniva.png">
 
 </head>
