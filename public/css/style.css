@@ -331,6 +331,7 @@ textarea {
 	width: 50px;
 	margin: 23px;
 	float: left;
+    position: fixed;
 }
 
 .logo_icon {
@@ -1100,7 +1101,9 @@ background: white;
         display: none;
     }
 
-
+    .nav_collapsed ul a:hover {
+        display: none;
+    }
 
 /* Media Queries */
 
@@ -1249,8 +1252,8 @@ background: white;
         color: #FFFFFF;
         font-size: 35px;
         margin: 31px 25px;
-        right: 5px;
         position: fixed;
+        right: 5px;
     }
 
     .fa.fa-bars:hover {
@@ -1260,12 +1263,12 @@ background: white;
 
     .nav_collapsed {
         display: none;
+        position: fixed;
         background: rgba(251, 251, 251, 0.81);
         right: 16px;
         left: 10px;
         top: 93px;
-        position: fixed;
-
+        border-radius: 5px;
     }
 
     .nav_collapsed ul a {
@@ -1276,9 +1279,11 @@ background: white;
         font-family: open sans;
         font-weight: normal;
         letter-spacing: 0.1em;
+        border-radius: 5px;
     }
 
     .nav_collapsed ul a:hover {
+        display: none;
         text-decoration: none;
         background: rgba(146, 191, 220, 0.58);
     }
